@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<robot name="robo" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="lbswirl_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="lbswirl">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lbswirl_actr">
+ 
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lfswirl_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="lfswirl">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lfswirl_actr">
+  
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rbswirl_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rbswirl">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rbswirl_actr">
+ 
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rfswirl_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rfswirl">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rfswirl_actr">
+  
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lbwheel_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="lbwheel">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lbwheel_actr">
+   
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="lfwheel_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="lfwheel">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="lfwheel_actr">
+    
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rbwheel_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rbwheel">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rbwheel_actr">
+
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rfwheel_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rfwheel">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rfwheel_actr">
+    
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

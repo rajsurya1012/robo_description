@@ -1,0 +1,17 @@
+<launch>
+  <param command="$(find xacro)/xacro $(find robo_description)/urdf/robo.xacro" name="robot_description"/>
+  <arg name="x" default = "15"/>
+  <arg name = "y" default ="9"/>
+  <arg name ="z" default =".35"/>
+  <arg name = "yaw" default="-1.57079" />  
+  <node args="-param robot_description -urdf -model robo -x=$(arg x) -y=$(arg y) -z=$(arg z) -Y=$(arg yaw) " name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  <include file="$(find robo_description)/launch/controller.launch" />
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+  <arg name="world_name" value="$(find robo_description)/world/world.world" />
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+</launch>
